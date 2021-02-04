@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Pizzify",
+  "description": "Replace unwanted images with pizza!",
+  "version": "1.0",
+  "content_scripts":[
+      {
+        "matches":["<all_urls>"],
+        "js": ["jquery.min.js","content.js"]
+      }
+    ],
+  "browser_action": {
+      "default_icon": {"32": "pizza.png"},
+      "default_popup": "popup.html"
+    },
+  // "background": {
+  //       "scripts": ["background.js"],
+  //       "persistent": false
+  //     },
+  "permissions": ["activeTab"]
+  }
